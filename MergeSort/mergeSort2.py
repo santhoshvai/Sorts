@@ -93,12 +93,10 @@ def mergeCLRS(A,start, mid, end):
     k = start
     i = 0
     j = 0
-    L.append(9223372036854775807) #sentinel  
-    R.append(9223372036854775807) #sentinel
-    """
-    sys.maxint
-    >> 9223372036854775807
-    """
+    L.append(9223372036854775807) # sentinel  
+    R.append(9223372036854775807) # sentinel
+    # sys.maxint
+    # >> 9223372036854775807
     while k<=(end-1):
         if L[i]<=R[j]:
             A[k] = L[i]
