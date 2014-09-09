@@ -18,12 +18,12 @@
 #     is often used as the recursive base case (when the problem size 
 #     is small) for higher overhead divide-and-conquer sorting 
 #     algorithms, such as merge sort or quick sort. 
-#======================================================================= 
+# ======================================================================= 
 def insertionSort( array ):
     n = len( array )    
     for i in range(1,n):
         key = array[i]
-        #Insert A[i] into the sorted sequence A[1...i-1]
+        # Insert A[i] into the sorted sequence A[1...i-1]
         j = i - 1
         while (j>=0) and (array[j]>key):
             array[j+1] = array[j]

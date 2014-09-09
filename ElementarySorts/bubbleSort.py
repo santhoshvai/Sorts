@@ -20,11 +20,11 @@ def bubble_sort(A):
     n = len(A)
     for i in range(n):
         swapped = False
-        for j in range(n-1,i,-1): #reverse range
+        for j in range(n-1,i,-1): # reverse range
             if A[j] < A[j-1]:
-                A[j], A[j-1] = A[j-1], A[j] #swap
+                A[j], A[j-1] = A[j-1], A[j] # swap
                 swapped = True
-        if not swapped: break #means that we have already sorted! so break
+        if not swapped: break # means that we have already sorted! so break
 
 def main():
     import random
@@ -35,4 +35,4 @@ def main():
     print;print "assertion pass"
 
 if __name__ == "__main__":
-        main()    
+    main()    
