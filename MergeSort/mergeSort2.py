@@ -88,8 +88,6 @@ def mergeCLRS(A,start, mid, end):
     """
     L = A[start:mid]
     R = A[mid:end]
-    #i = start
-    #j = mid
     k = start
     i = 0
     j = 0
@@ -109,7 +107,6 @@ def mergeCLRS(A,start, mid, end):
 def main():
     import random
     seq = [random.randint(1, 10) for _ in range(4000)]
-    #print;print "inputArray: " + str(seq)
     sorted_seq = sorted(seq)
     merge_sort_CLRS(seq, 0, len(seq))
     assert (seq == sorted_seq)
