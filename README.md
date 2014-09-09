@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/santhoshvai/Sorts.svg?branch=master)](https://travis-ci.org/santhoshvai/Sorts)
+[![Build Status](https://travis-ci.org/santhoshvai/Sorts.svg?branch=master)](https://travis-ci.org/santhoshvai/Sorts) [![Code Health](https://landscape.io/github/santhoshvai/Sorts/master/landscape.png)](https://landscape.io/github/santhoshvai/Sorts/master)
