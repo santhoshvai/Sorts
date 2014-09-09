@@ -20,25 +20,23 @@
 #     algorithms, such as merge sort or quick sort. 
 #======================================================================= 
 def insertionSort( array ):
-  n = len( array )	
-  for i in range(1,n):
-    key = array[i]
-    """
-    Insert A[i] into the sorted sequence A[1...i-1]
-    """
-    j = i - 1
-    while (j>=0) and (array[j]>key):
-      array[j+1] = array[j]
-      j = j-1
-    array[j+1] = key
+    n = len( array )    
+    for i in range(1,n):
+        key = array[i]
+        #Insert A[i] into the sorted sequence A[1...i-1]
+        j = i - 1
+        while (j>=0) and (array[j]>key):
+            array[j+1] = array[j]
+            j = j-1
+        array[j+1] = key
 
 def main():
-  import random
-  seq = [random.randint(1, 10) for _ in range(4000)]
-  sorted_seq = sorted(seq)
-  insertionSort(seq)
-  assert (seq == sorted_seq)
-  print "assertion pass"
+    import random
+    seq = [random.randint(1, 10) for _ in range(4000)]
+    sorted_seq = sorted(seq)
+    insertionSort(seq)
+    assert (seq == sorted_seq)
+    print "assertion pass"
 
 if __name__ == "__main__":
-  main()	
+    main()  

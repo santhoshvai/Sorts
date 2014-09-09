@@ -23,26 +23,26 @@
 #    of time complexity, however, insertion sort is better.
 #======================================================================= 
 def selectionSort( array ):
-  """
-  First find the smallest element of A and exchange it with A[1]
-  Then find the second smallest element of A, exchange with A[2]
-  Continue in this manner for the first n-1 elements of A
-  """
-  n = len( array )	
-  for i in range( n-1 ):
-    minimum = i 
-    #find min
-    for j in range( i + 1 , n ):
-      if array[j] < array[minimum]:
-        minimum = j #update the min index
-    #swap the min and the current element
-    array[minimum], array[i] = array[i], array[minimum]
+    """
+    First find the smallest element of A and exchange it with A[1]
+    Then find the second smallest element of A, exchange with A[2]
+    Continue in this manner for the first n-1 elements of A
+    """
+    n = len( array )    
+    for i in range( n-1 ):
+        minimum = i 
+        #find min
+        for j in range( i + 1 , n ):
+            if array[j] < array[minimum]:
+                minimum = j #update the min index
+        #swap the min and the current element
+        array[minimum], array[i] = array[i], array[minimum]
 
 def main():
-  array = [54,26,93,17,77,31,44,55,20]
-  print;print "inputArray: " + str(array)
-  selectionSort( array )
-  print;print "sortedArray: " + str(array)
+    array = [54,26,93,17,77,31,44,55,20]
+    print;print "inputArray: " + str(array)
+    selectionSort( array )
+    print;print "sortedArray: " + str(array)
 
 if __name__ == "__main__":
-  main()	
+    main()  
