@@ -36,7 +36,7 @@ def merge_sort_web(A,start,end):
     Sort list A into order, and return result.
     """
     if start < end:
-    mid = (start+end)//2
+        mid = (start+end)//2
     if len(A[start:end])==1: 
         return A
     merge_sort_web(A, start, mid)
@@ -54,15 +54,15 @@ def merge(a,start, mid, end):
     j = mid
     thisMid = len(b)
     while (i<thisMid) and (j<end):
-    if a[j] < b[i]:
-        a[k] = a[j]
-        k+=1;j+=1
-    else:
+        if a[j] < b[i]:
+            a[k] = a[j]
+            k+=1;j+=1
+        else:
+            a[k] = b[i]
+            k+=1;i+=1
+    while i<thisMid:
         a[k] = b[i]
         k+=1;i+=1
-    while i<thisMid:
-    a[k] = b[i]
-    k+=1;i+=1
 
 def merge_sort_CLRS(A,start,end, checkedType = False):
     """
@@ -70,11 +70,11 @@ def merge_sort_CLRS(A,start,end, checkedType = False):
     Requires: the list to contain only integers
     """
     if not checkedType:#to avoid repeated checking | Done only once
-    for n in A:
-        if not isinstance(n, int): #list has to contain only integers
-        raise TypeError
+        for n in A:
+            if not isinstance(n, int): #list has to contain only integers
+                raise TypeError
     if start < end:
-    mid = (start+end)//2
+        mid = (start+end)//2
     if len(A[start:end])==1: 
         return A
     merge_sort_CLRS(A, start, mid, True) #True since already type has been checked once
@@ -100,12 +100,12 @@ def mergeCLRS(A,start, mid, end):
     >> 9223372036854775807
     """
     while k<=(end-1):
-    if L[i]<=R[j]:
-        A[k] = L[i]
-        i += 1; k += 1
-    else:
-        A[k] = R[j]
-        j += 1; k += 1
+        if L[i]<=R[j]:
+            A[k] = L[i]
+            i += 1; k += 1
+        else:
+            A[k] = R[j]
+            j += 1; k += 1
 
 
 def main():
